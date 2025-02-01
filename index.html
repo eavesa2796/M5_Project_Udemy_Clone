@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Udemy Clone</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font-awesome css -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- My custom styles -->
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">Udemy Clone</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <form class="d-flex mx-auto me-3 my-3">
+            <input
+              class="form-control me-2 px-3 rounded-input"
+              type="text"
+              placeholder="Search for anything"
+            />
+            <button class="btn btn-primary" type="button">Search</button>
+          </form>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link me-2" href="#">Categories</a>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+              <button
+                class="nav-link btn dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Plans
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Personal Plan</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Team Plan</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Enterprise Plan</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Leadership Academy</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- End Dropdown -->
+
+            <li class="nav-item">
+              <a class="nav-link me-3 text-nowrap" href="#">My Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-3 text-nowrap" href="#"
+                ><i class="fas fa-shopping-cart"></i> View Cart</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-primary me-2 mb-2 text-nowrap" href="#"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary text-nowrap" href="#">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a id="themeToggle" class="btn text-nowrap" href="#">
+                <i id="themeIconMoon" class="visible fas fa-moon"></i>
+                <i id="themeIconSun" class="hidden fas fa-sun"></i>
+                <span id="themeText">Dark Mode</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero pb-5 pb-md-0 overflow-hidden">
+      <div
+        class="container d-flex flex-md-row align-items-center justify-content-between"
+      >
+        <div class="row">
+          <!-- Text Content -->
+          <div class="col-6">
+            <div
+              class="bg-white text-dark rounded p-4 p-sm-3 d-none d-md-block blurb-border header-blurb-lg shadow-lg"
+            >
+              <h1 class="fs-3 fw-bold mb-3">Learn Anytime, Anywhere</h1>
+              <p class="fs-5 mb-0">
+                Discover thousands of online courses to help you grow and
+                achieve your goals at your own pace.
+              </p>
+            </div>
+          </div>
+
+          <!-- Image -->
+          <div class="col-6">
+            <div class="text-center">
+              <!-- Image for larger screens -->
+              <img
+                class="img-fluid d-none d-md-block"
+                src="images/professor-1.png"
+                alt="Professor"
+                style="max-width: 100%; min-width: 400px"
+              />
+            </div>
+          </div>
+          <!-- Image for smaller screens -->
+          <img
+            class="img-fluid w-100 d-block d-md-none m-auto blurb-border shadow-lg"
+            src="images/image-for-mobile.jpg"
+            alt="Professor"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Text Content for Small Screens -->
+    <div
+      class="bg-light text-dark rounded p-4 d-block d-md-none text-center mt-4"
+    >
+      <h1>The Future is Yours!</h1>
+      <h3>Your choice.</h3>
+      <p>Take action now.</p>
+    </div>
+
+    <!-- Main Section -->
+    <section class="py-5">
+      <div class="container">
+        <h2>All the skills you need in one place</h2>
+        <div class="row">
+          <!-- Horizontal Scrollable Carousel -->
+          <div class="carousel-container" role="tablist">
+            <div class="carousel-scroll-port">
+              <!-- Scroll Item 1 -->
+              <div class="carousel-scroll-item">
+                <div class="nav-button-container">
+                  <button
+                    type="button"
+                    id="tab-0"
+                    aria-selected="false"
+                    role="tab"
+                    class="nav-button"
+                    tabindex="-1"
+                  >
+                    <span class="button-label">Data Science</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Scroll Item 2 -->
+              <div class="carousel-scroll-item">
+                <div class="nav-button-container">
+                  <button
+                    type="button"
+                    id="tab-1"
+                    aria-selected="false"
+                    role="tab"
+                    class="nav-button"
+                    tabindex="-1"
+                  >
+                    <span class="button-label">IT Certifications</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Scroll Item 3 -->
+              <div class="carousel-scroll-item">
+                <div class="nav-button-container nav-button-container-active">
+                  <button
+                    type="button"
+                    id="tab-2"
+                    aria-selected="true"
+                    role="tab"
+                    class="nav-button nav-button-active"
+                    tabindex="0"
+                  >
+                    <span class="button-label">Leadership</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Scroll Item 4 -->
+              <div class="carousel-scroll-item">
+                <div class="nav-button-container">
+                  <button
+                    type="button"
+                    id="tab-3"
+                    aria-selected="false"
+                    role="tab"
+                    class="nav-button"
+                    tabindex="-1"
+                  >
+                    <span class="button-label">Web Development</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Scroll Item 5 -->
+              <div class="carousel-scroll-item">
+                <div class="nav-button-container">
+                  <button
+                    type="button"
+                    id="tab-4"
+                    aria-selected="false"
+                    role="tab"
+                    class="nav-button"
+                    tabindex="-1"
+                  >
+                    <span class="button-label">Communication</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Scroll Item 6 (Active) -->
+              <div class="carousel-scroll-item">
+                <div class="nav-button-container">
+                  <button
+                    type="button"
+                    id="tab-5"
+                    aria-selected="false"
+                    role="tab"
+                    class="nav-button"
+                    tabindex="-1"
+                  >
+                    <span class="button-label">Business Analytics</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Different Skills Selection Area -->
+    <section class="py-0">
+      <div class="container-fluid skill-select">
+        <h2 id="skillsHeading" class="text-start mb-4 ps-5 mt-4">Leadership</h2>
+        <div class="row px-5">
+          <!-- Course Card -->
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="card course-card mb-3"
+              data-bs-toggle="popover"
+              data-bs-trigger="hover"
+              data-bs-title="Dare to Lead"
+              data-bs-content="Become a Next Generation Leader, Achieve More and Create Impact.
+                Learn the secrets to Lead right in your life.
+                Discover the principles of Emotional Intelligence.
+                Learn the Art of Storytelling for Effective Leadership."
+              data-bs-placement="right"
+            >
+              <img
+                src="images/leadership.webp"
+                class="card-img-top img-fluid"
+                alt="Course 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dare to Lead</h5>
+                <p class="card-text">
+                  Susmita Dutta, Ash Akshay Goel <br />
+                  <span class="fs-5 font-color"><strong>$104.99</strong></span>
+                </p>
+                <button class="btn btn-primary me-3 mb-2">Enroll Now</button
+                ><span class="badge bg-secondary text-light p-2"
+                  >Basic Plan</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="card course-card mb-3"
+              data-bs-toggle="popover"
+              data-bs-trigger="hover"
+              data-bs-title="Leadership"
+              data-bs-content="Master leadership skills and leadership techniques with this highly practical advice and training.
+                Become a Master in Leadership.
+                Be a better boss, and run a highly effective team.
+                Delegate effectively to empower their team."
+              data-bs-placement="right"
+            >
+              <img
+                src="images/robotics.webp"
+                class="card-img-top img-fluid"
+                alt="Course 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Leadership</h5>
+                <p class="card-text">
+                  Chris Croft <br />
+                  <span class="fs-5 font-color"><strong>$124.99</strong></span>
+                </p>
+                <button class="btn btn-primary me-3 mb-2">Enroll Now</button
+                ><span class="badge bg-secondary text-light p-2"
+                  >Basic Plan</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="card course-card mb-3"
+              data-bs-toggle="popover"
+              data-bs-trigger="hover"
+              data-bs-title="JavaScript Essentials"
+              data-bs-content="Build 16 web development projects for your portfolio, ready to apply for junior developer jobs.
+                Learn the latest technologies, including Javascript, React, Node and even Web3 development.
+                After the course you will be able to build ANY website you want."
+              data-bs-placement="left"
+            >
+              <img
+                src="images/data.webp"
+                class="card-img-top img-fluid"
+                alt="Course 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">JavaScript Essentials</h5>
+                <p class="card-text">
+                  Anthony Smith | Lead Dev <br />
+                  <span class="fs-5 font-color"><strong>$159.99</strong></span>
+                </p>
+                <button class="btn btn-primary me-3 mb-2">Enroll Now</button
+                ><span class="badge bg-info text-light p-2">Premium Plan</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="card course-card mb-3"
+              data-bs-toggle="popover"
+              data-bs-trigger="hover"
+              data-bs-title="React Fundamentals"
+              data-bs-content="Become an advanced, confident, and modern React developer from scratch.
+                Build 10+ beautiful projects, including two HUGE professional real-world apps.
+                Become job-ready by working with libraries and tools used in professional projects."
+              data-bs-placement="left"
+            >
+              <img
+                src="images/team.webp"
+                class="card-img-top img-fluid"
+                alt="Course 4"
+              />
+              <div class="card-body">
+                <h5 class="card-title">React Fundamentals</h5>
+                <p class="card-text">
+                  Jonas Schmettman | Instructor <br />
+                  <span class="fs-5 font-color"><strong>$124.99</strong></span>
+                </p>
+                <button class="btn btn-primary me-3 mb-2">Enroll Now</button
+                ><span class="badge bg-info text-light p-2">Premium Plan</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trusted by Companies Section -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="fs-6 text-center mb-4">
+          Trusted by over 16,000 companies and millions of learners around the
+          world
+        </h2>
+      </div>
+      <div class="row my-1">
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="col-1 me-3">
+            <img
+              class="img-fluid"
+              src="images/volkswagen_logo.png"
+              alt="VW Logo"
+            />
+          </div>
+          <div class="col-1 me-3">
+            <img
+              class="img-fluid"
+              src="images/samsung_logo.png"
+              alt="Samsung Logo"
+            />
+          </div>
+          <div class="col-1 me-3">
+            <img
+              class="img-fluid"
+              src="images/cisco_logo.png"
+              alt="Cisco Logo"
+            />
+          </div>
+          <div class="col-1 me-3">
+            <img
+              class="img-fluid"
+              src="images/vimeo_logo_resized-2.png"
+              alt="Vimeo Logo"
+            />
+          </div>
+          <div class="col-1 me-3">
+            <img
+              class="img-fluid"
+              src="images/procter_gamble_logo.png"
+              alt="Procter and Gamble Logo"
+            />
+          </div>
+          <div class="col-1 me-3">
+            <img
+              class="img-fluid"
+              src="images/hewlett_packard_enterprise_logo.png"
+              alt="Hewlett Packard Logo"
+            />
+          </div>
+          <div class="col-1 me-3">
+            <img class="img-fluid" src="images/citi_logo.png" alt="Citi Logo" />
+          </div>
+          <div class="col-1 me-3">
+            <img
+              class="img-fluid"
+              src="images/ericsson_logo.png"
+              alt="Ericsson Logo"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trending Courses -->
+    <section class="py-3">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-4 mt-5 d-flex flex-column justify-content-center align-items-start"
+          >
+            <h3>Top trends for the future of work</h3>
+            <p>
+              Our 2025 Global Learning & Skills Trends Report is out now! Find
+              out how to build the skills to keep pace with change.
+            </p>
+            <button class="btn btn-outline-secondary" type="button">
+              Get the Report <i class="fas fa-arrow-right ms-2"></i>
+            </button>
+          </div>
+
+          <div class="col-md-8">
+            <img class="img-fluid" src="images/trending.webp" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- What Learners Are Viewing Section -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-start mb-4">Learners are viewing</h2>
+        <div class="row">
+          <!-- Course Card -->
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="card course-card mb-3"
+              data-bs-toggle="popover"
+              data-bs-trigger="hover"
+              data-bs-title="100 Days of Code"
+              data-bs-content="You will master the Python programming language by building 100 unique projects over 100 days.
+                You will learn automation, game, app and web development, data science and machine learning all using Python.
+                You will be able to program in Python professionally!"
+              data-bs-placement="right"
+            >
+              <img
+                src="images/exam.webp"
+                class="card-img-top img-fluid"
+                alt="Course 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">100 Days of Code</h5>
+                <p class="card-text">
+                  Dr. Ang Yu, Developer and Leader <br />
+                  <span class="fs-5 font-color"><strong>$124.99</strong></span>
+                </p>
+                <button class="btn btn-primary me-3 mb-2">Enroll Now</button
+                ><span class="badge bg-secondary text-light p-2"
+                  >Basic Plan</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="card course-card mb-3"
+              data-bs-toggle="popover"
+              data-bs-trigger="hover"
+              data-bs-title="Python 101"
+              data-bs-content="Master Python Programming by doing 100+ Challenges.
+                Detail understanding of fundamentals.
+                Build Multithreaded Applications."
+              data-bs-placement="right"
+            >
+              <img
+                src="images/school.webp"
+                class="card-img-top img-fluid"
+                alt="Course 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Python 101</h5>
+                <p class="card-text">
+                  Professor Eaves, Developer <br />
+                  <span class="fs-5 font-color"><strong>$119.99</strong></span>
+                </p>
+                <button class="btn btn-primary me-3 mb-2">Enroll Now</button
+                ><span class="badge bg-secondary text-light p-2"
+                  >Basic Plan</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="card course-card mb-3"
+              data-bs-toggle="popover"
+              data-bs-trigger="hover"
+              data-bs-title="JavaScript Essentials"
+              data-bs-content="Build 16 web development projects for your portfolio, ready to apply for junior developer jobs.
+                Learn the latest technologies, including Javascript, React, Node and even Web3 development.
+                After the course you will be able to build ANY website you want."
+              data-bs-placement="left"
+            >
+              <img
+                src="images/study.webp"
+                class="card-img-top img-fluid"
+                alt="Course 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">JavaScript Essentials</h5>
+                <p class="card-text">
+                  Anthony Smith | Lead Dev <br />
+                  <span class="fs-5 font-color"><strong>$159.99</strong></span>
+                </p>
+                <button class="btn btn-primary me-3 mb-2">Enroll Now</button
+                ><span class="badge bg-info text-light p-2">Premium Plan</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div
+              class="card course-card mb-3"
+              data-bs-toggle="popover"
+              data-bs-trigger="hover"
+              data-bs-title="React Full Course"
+              data-bs-content="Become an advanced, confident, and modern React developer from scratch.
+                Build 10+ beautiful projects, including two HUGE professional real-world apps.
+                Become job-ready by working with libraries and tools used in professional projects."
+              data-bs-placement="left"
+            >
+              <img
+                src="images/student.webp"
+                class="card-img-top img-fluid"
+                alt="Course 4"
+              />
+              <div class="card-body">
+                <h5 class="card-title">React Full Course</h5>
+                <p class="card-text">
+                  Jonas Schmettman | Instructor <br />
+                  <span class="fs-5 font-color"><strong>$124.99</strong></span>
+                </p>
+                <button class="btn btn-primary me-3 mb-2">Enroll Now</button
+                ><span class="badge bg-info text-light p-2">Premium Plan</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning Goals -->
+    <section class="py-2">
+      <div class="container-fluid py-5 overflow-hidden">
+        <h2 class="py-4">Learning focused on your goals</h2>
+        <div class="row">
+          <div class="stack-row col-sm-12 col-md-4 ms-2">
+            <div
+              id="focusedLearning"
+              class="focused-learning d-flex justify-content-start align-items-center border-color mb-3"
+            >
+              <div class="set-display">
+                <i class="fa fa-computer fa-2x"></i>
+              </div>
+              <div class="mx-4 mx-sm-2">
+                <h4 class="focused-learning-heading">Hands-on training</h4>
+                <p class="set-display">
+                  Upskill effectively with AI-powered coding exercises, practice
+                  tests, and quizzes.
+                </p>
+              </div>
+            </div>
+            <div
+              id="focusedLearning"
+              class="focused-learning d-flex justify-content-start align-items-center border-color mb-3"
+            >
+              <div class="set-display">
+                <i class="fa fa-graduation-cap fa-2x"></i>
+              </div>
+              <div class="mx-4 mx-sm-2">
+                <h4 class="focused-learning-heading">Certification prep</h4>
+                <p class="set-display">
+                  Prep for industry-recognized certifications by solving
+                  real-world challenges and earn badges along the way.
+                </p>
+              </div>
+            </div>
+            <div
+              id="focusedLearning"
+              class="focused-learning d-flex justify-content-start align-items-center border-color mb-3"
+            >
+              <div class="set-display">
+                <i class="fa-solid fa-chart-simple fa-2x"></i>
+              </div>
+              <div class="mx-4 mx-sm-2">
+                <h4 class="focused-learning-heading">
+                  Insights and analytics
+                  <span class="badge bg-secondary">Enterprise Plan</span>
+                </h4>
+                <p class="set-display">
+                  Fast-track goals with advanced insights plus a dedicated
+                  customer success team to help drive effective learning.
+                </p>
+              </div>
+            </div>
+            <div
+              id="focusedLearning"
+              class="focused-learning d-flex justify-content-start align-items-center border-color mb-3"
+            >
+              <div class="set-display">
+                <i class="fa-solid fa-network-wired fa-2x"></i>
+              </div>
+              <div class="mx-4 mx-sm-2">
+                <h4 class="focused-learning-heading">
+                  Customizable content
+                  <span class="badge bg-secondary">Enterprise Plan</span>
+                </h4>
+                <p class="set-display">
+                  Create tailored learning paths for team and organization goals
+                  and even host your own content and resources.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <img
+              id="focusedLearningImage"
+              src="images/hands-on-training.webp"
+              alt="Business Communication Image"
+              class="img-fluid ms-5"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Plan Cards -->
+    <section class="container mt-5">
+      <h2 class="text-center mb-4">Udemy Courses Pricing Plans</h2>
+      <div class="row justify-content-center">
+        <!-- Personal Plan -->
+        <div class="col-md-4">
+          <div class="card border-primary mb-4 hover-shadow">
+            <div
+              class="card-header text-center text-shadow bg-primary text-white"
+            >
+              <h4>Personal Plan</h4>
+              <h5 class="mb-0">$9.99/month</h5>
+            </div>
+            <div class="card-body">
+              <ul class="list-unstyled">
+                <li>
+                  <i class="fa fa-check text-success me-2"></i>Access to 1,000+
+                  courses
+                </li>
+                <li>
+                  <i class="fa fa-check text-success me-2"></i>Certification of
+                  Completion
+                </li>
+                <li>
+                  <i class="fa fa-times text-danger me-2"></i>Offline Viewing
+                </li>
+                <li>
+                  <i class="fa fa-times text-danger me-2"></i>Exclusive Webinars
+                </li>
+                <li>
+                  <i class="fa fa-times text-danger me-2"></i>Personalized
+                  Recommendations
+                </li>
+              </ul>
+              <div class="text-center">
+                <button class="btn btn-primary">Choose Plan</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Plan -->
+        <div class="col-md-4">
+          <div class="card border-success mb-4 hover-shadow">
+            <div
+              class="card-header text-center text-shadow bg-success text-white"
+            >
+              <h4>Team Plan</h4>
+              <h5 class="mb-0">$19.99/month</h5>
+            </div>
+            <div class="card-body">
+              <ul class="list-unstyled">
+                <li>
+                  <i class="fa fa-check text-success me-2"></i>Access to 5,000+
+                  courses
+                </li>
+                <li>
+                  <i class="fa fa-check text-success me-2"></i>Certification of
+                  Completion
+                </li>
+                <li>
+                  <i class="fa fa-check text-success me-2"></i>Offline Viewing
+                </li>
+                <li>
+                  <i class="fa fa-check text-success me-2"></i>Exclusive
+                  Webinars
+                </li>
+                <li>
+                  <i class="fa fa-times text-danger me-2"></i>Personalized
+                  Recommendations
+                </li>
+              </ul>
+              <div class="text-center">
+                <button class="btn btn-success">Choose Plan</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="col-md-4">
+          <div class="card border-warning mb-4 hover-shadow">
+            <div
+              class="card-header text-center text-shadow bg-warning text-white"
+            >
+              <h4>Enterprise Plan</h4>
+              <h5 class="mb-0">$29.99/month</h5>
+            </div>
+            <div class="card-body">
+              <ul class="list-unstyled">
+                <li>
+                  <i class="fa fa-check text-success me-2"></i>Access to 12,000+
+                  courses
+                </li>
+                <li>
+                  <i class="fa fa-check text-success me-2"></i>Certification of
+                  Completion
+                </li>
+                <li>
+                  <i class="fa fa-check text-success me-2"></i>Offline Viewing
+                </li>
+                <li>
+                  <i class="fa fa-check text-success me-2"></i>Exclusive
+                  Webinars
+                </li>
+                <li>
+                  <i class="fa fa-check text-success me-2"></i>Personalized
+                  Recommendations
+                </li>
+              </ul>
+              <div class="text-center">
+                <button class="btn btn-warning text-white text-shadow">
+                  Choose Plan
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Tables -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="table-responsive rounded">
+              <table
+                class="table table-striped table-hover table-bordered align-middle"
+              >
+                <thead class="table-header">
+                  <tr>
+                    <th scope="col">Plan</th>
+                    <th scope="col">Features</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Personal Plan</strong><br />
+                      <small>Great for beginners</small>
+                    </td>
+                    <td>
+                      - Access to free courses<br />
+                      - Lifetime access<br />
+                      - Mobile learning
+                    </td>
+                    <td><span class="badge bg-success">Available</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Team Plan</strong><br />
+                      <small>Best for professionals</small>
+                    </td>
+                    <td>
+                      - Includes all Personal Plan features<br />
+                      - Certification courses<br />
+                      - Expert instructors
+                    </td>
+                    <td><span class="badge bg-warning">Limited</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Enterprise Plan</strong><br />
+                      <small>For small businesses</small>
+                    </td>
+                    <td>
+                      - Includes all Team Plan features<br />
+                      - Team analytics<br />
+                      - Admin tools
+                    </td>
+                    <td><span class="badge bg-danger">Contact Sales</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Leadership Academy</strong><br />
+                      <small>Custom solutions</small>
+                    </td>
+                    <td>
+                      - Includes all Enterprise features<br />
+                      - Dedicated account manager<br />
+                      - Custom integrations
+                    </td>
+                    <td><span class="badge bg-danger">Contact Sales</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sign Up Form -->
+    <section class="py-5 form-bg text-light">
+      <div class="container">
+        <h2 class="text-center">Sign up for your plan today.</h2>
+        <div class="row">
+          <div class="col-12 col-md-8 offset-md-2 px-5">
+            <form action="#" method="POST" novalidate>
+              <label class="form-label fs-5" for="fullName">Full Name</label>
+              <input
+                type="text"
+                class="form-control form-control-lg mb-3"
+                name="fullName"
+                required
+              />
+              <label class="form-label fs-5" for="email">Email </label>
+              <input
+                type="email"
+                class="form-control form-control-lg mb-3"
+                name="email"
+                required
+              />
+              <input
+                id="checkbox"
+                type="checkbox"
+                class="form-check-input mb-3"
+                name="terms"
+                required
+              />
+              <label for="terms" class="form-check-label"
+                >I agree to the
+                <a
+                  class="text-white text-underline"
+                  id="terms"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  >terms.</a
+                ></label
+              >
+              <button
+                id="signUpBtn"
+                type="submit"
+                class="btn btn-success btn-lg w-100 d-block mx-auto"
+              >
+                Sign Up Now
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section for modal  -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-8 offset-md-2 px-5">
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-4" id="exampleModalLabel">
+                      Terms of Service
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    By using this website, you agree to the following terms:
+                    <ul>
+                      <li>
+                        You must be at least 18 years old to use our services.
+                      </li>
+                      <li>
+                        All content is for informational purposes only and may
+                        not be copied or redistributed.
+                      </li>
+                      <li>
+                        We are not responsible for any damages resulting from
+                        the use of this website.
+                      </li>
+                      <li>
+                        We reserve the right to modify these terms at any time.
+                      </li>
+                    </ul>
+                    By continuing, you acknowledge that you have read and agree
+                    to these terms.
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      id="agreeBtn"
+                      class="btn btn-primary"
+                      data-bs-dismiss="modal"
+                    >
+                      Agree to Terms
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="mb-3">FAQs</h2>
+            <p>Find answers to your questions</p>
+            <div class="accordion accordion-flush" id="accordionFlushFAQ">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed table-header text-white mb-1"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    What is Udemy, and how does it work?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Udemy is an online learning platform offering thousands of
+                    courses on various topics, from business and technology to
+                    personal development and creative skills. Simply sign up,
+                    browse the available courses, and enroll in the ones that
+                    interest you. Once enrolled, you can access the course
+                    materials anytime, anywhere.
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed table-header text-white mb-1"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseTwo"
+                    >
+                      Do I get a certificate after completing a course?
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseTwo"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      Yes, most Udemy courses offer a certificate of completion.
+                      After finishing all the lectures and assignments, you can
+                      download and share your certificate to showcase your newly
+                      acquired skills.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed table-header text-white mb-1"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseThree"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseThree"
+                    >
+                      Can I access Udemy courses offline?
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseThree"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      Yes, Udemy's mobile app allows you to download courses for
+                      offline viewing. This feature is perfect for learning on
+                      the go, even when you don’t have an internet connection.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image Carousel  -->
+          <div class="col-md-6">
+            <div id="carouselExampleCaptions" class="carousel slide">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="images/learning.jpg"
+                    class="d-block w-100"
+                    alt="Learning"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Instructors with years of experience</h5>
+                    <p>
+                      Get a top notch education and earn your certificate today!
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="images/learning-2.jpg"
+                    class="d-block w-100"
+                    alt="Student Learning"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Learn anything</h5>
+                    <p>With so many courses, it's a great way to get ahead.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="images/learning-3.jpg"
+                    class="d-block w-100"
+                    alt="More Learning"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Classroom learning on the web!</h5>
+                    <p>
+                      Learn you favorite subjects from the comfort of your own
+                      home.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+      <div class="container">
+        <p>&copy; 2025 Udemy Clone. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script for JS Functions -->
+    <script src="js/main.js"></script>
+
+    <!-- Script to run the confetti function on sign up  -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  </body>
+</html>

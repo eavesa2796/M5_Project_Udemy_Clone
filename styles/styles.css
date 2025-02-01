@@ -1,0 +1,231 @@
+/*Prevent overflow*/
+body {
+  overflow-x: hidden;
+}
+
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
+/*Nav Search Input*/
+.rounded-input {
+  border-radius: 30px;
+}
+
+/*Hero*/
+.hero {
+  background: linear-gradient(to right, #f69c08, #e7c417);
+  background: linear-gradient(to right, #f69c08 40%, #f2cf6e 60%);
+  color: #fff;
+  text-align: center;
+  padding: 2% 0;
+}
+.blurb-border {
+  border: 4px solid rgb(142, 44, 211);
+  border-radius: 5px;
+  padding: 0;
+}
+.header-blurb-lg {
+  max-width: 650px;
+  width: 400px;
+  min-width: 350px;
+  margin: 50px auto 0 auto;
+}
+
+/*Skill Carousel*/
+.carousel-container {
+  overflow-x: auto;
+  display: flex;
+  white-space: nowrap;
+  padding: 1rem 0;
+}
+
+.carousel-scroll-port {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-button-container {
+  display: inline-block;
+}
+
+.nav-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Active Button Container */
+.nav-button-container-active {
+  border-bottom: 2px solid rgb(142, 44, 211); /* Active border color */
+}
+
+/*Scrollbar*/
+.carousel-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+/*Skill Section */
+.skill-select {
+  border: 3px solid rgb(222, 222, 222);
+}
+.course-card {
+  box-shadow: 0 40px 60px rgba(225, 225, 225, 0.6);
+}
+.font-color {
+  color: #f5466f;
+}
+
+.popover {
+  background-color: #f8f9fa;
+  border: 2px solid #d4d4d4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popover-header {
+  background: linear-gradient(to right, #1111ed, #8052ea);
+  background: #8e2cd3;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 3px solid rgb(102, 102, 102);
+}
+
+.popover-body {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/*Focused learning goals*/
+.border-color {
+  border: 2px solid rgb(79, 79, 79);
+  border-radius: 10px;
+}
+
+.focused-learning {
+  cursor: pointer;
+  padding: 15px;
+}
+
+.badge {
+  font-size: 0.8rem;
+}
+.focused-learning:hover {
+  background: rgb(71, 32, 100);
+  background: radial-gradient(rgb(142, 44, 211), #390670);
+  color: white;
+}
+.focused-learning-heading {
+  font-size: 1.2rem;
+}
+
+/*Scrollbar*/
+.stack-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.stack-row::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.stack-row::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+/*Table*/
+.table-header {
+  background: linear-gradient(to right, #592577, #390670);
+  color: white;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 3px rgb(79, 79, 79);
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 0 60px -14px rgb(91, 91, 91);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/*Sign Up Form*/
+.form-bg {
+  background: radial-gradient(rgb(142, 44, 211), #390670);
+}
+
+/*Accordion*/
+.accordion-button.collapsed::after {
+  background-size: 16px 16px;
+  content: "\2719";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.accordion-button:not(.collapsed)::after {
+  background-size: 16px 16px;
+  content: "\268A";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*Footer*/
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+/*Hero Section for smaller screens*/
+@media screen and (max-width: 1200px) {
+  .header-blurb-lg {
+    margin-top: 0px;
+  }
+  .hero {
+    padding: 50px 30px;
+  }
+}
+
+/*Adjust the focused learning divs*/
+@media screen and (max-width: 767px) {
+  .stack-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    overflow-x: scroll;
+  }
+  .set-display {
+    display: none;
+  }
+  .focused-learning {
+    padding: 1px;
+    border: none;
+  }
+  .focused-learning:hover {
+    background: transparent;
+    color: rgb(0, 0, 0);
+  }
+  .focused-learning-heading {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+}
