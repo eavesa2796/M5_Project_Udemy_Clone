@@ -151,7 +151,7 @@ function darkMode() {
     themeText.textContent = newTheme === "dark" ? "Light Mode" : "Dark Mode";
 
     //Toggle the icons
-    themeIconMoon.classList.toggle("d-none");
+    themeIconMoon.classList.toggle("d-inline");
     themeIconSun.classList.toggle("d-none");
   });
 }
