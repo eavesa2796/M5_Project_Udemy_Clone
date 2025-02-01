@@ -3,12 +3,6 @@ body {
   overflow-x: hidden;
 }
 
-.hidden {
-  display: none;
-}
-.visible {
-  display: block;
-}
 /*Nav Search Input*/
 .rounded-input {
   border-radius: 30px;
