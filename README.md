@@ -1,11 +1,11 @@
 
 # Udemy Clone
 
-This project is a simplified recreation of the Udemy platform, where users can browse courses, sign up, and interact with the website through a responsive layout built with Bootstrap. The project also explores simulating future interactive features using JavaScript.
+This project is a simplified recreation of the Udemy platform, where users can browse courses, sign up, and interact with the website through a responsive layout built with Bootstrap. The project also explores using interactive features with JavaScript.
 
 ## Project Overview
 
-The goal of this project is to practice the use of **Bootstrap** for building responsive and structured websites, and to improve **JavaScript** skills by simulating future functionalities for a website.
+The goal of this project is to practice the use of **Bootstrap** for building responsive and structured websites, and to improve **JavaScript** skills by implementing functionalities for a website.
 
 ### **Part 1: Bootstrap Website**
 
